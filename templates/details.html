@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details</title>
+
+    <style>
+       
+table {
+  width: 100%; 
+  border-collapse: collapse;
+}
+
+
+th {
+  background-color: #f2f2f2; 
+  border: 1px solid #dddddd; 
+  padding: 8px; 
+  text-align: left; 
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+
+td {
+  border: 1px solid #dddddd; 
+  padding: 8px; 
+  text-align: left; 
+}
+
+    </style>
+</head>
+<body>
+  <h1><center> DONORS DETAILS</center></h1>
+  <hr>
+  <br><br>
+    <table border="4">
+        <tr>
+            <th>USERNAME</th>
+            <th>PASSWORD</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE NO</th>
+            <th>ADDRESS</th>
+
+        </tr>
+
+        {% for x in donorlist %}
+        <tr>
+            {% for col in x %}
+            <td>{{col}}</td>
+            {%endfor%}
+        </tr>    
+        {%endfor%} 
+    </table>
+
+    
+    
+
+    
+</body>
+</html>

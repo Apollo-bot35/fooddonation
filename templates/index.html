@@ -1,0 +1,398 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Meal Donation Organizer</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <style>
+        .box a{
+            text-decoration: none;
+            align-items: center;
+           
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-top:50px;
+  position:relative;
+  
+ 
+  
+  margin-top:25px;
+  padding: 7px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 3px;
+
+  background-color: rgb(193, 191, 191);
+  padding:35px;
+  color:#c01414;
+  text-align: center;
+  border-radius: 15px;
+  height:115px;
+  border:1px solid #ccc;
+}
+
+
+.contain {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.service {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(50% - 40px);
+}
+
+.service h2 {
+  color: #89b8ea;
+}
+
+.service p {
+  color: #555;
+}
+
+
+.con {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blog-post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h2 {
+  color: #343a40;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.blog-post a {
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.blog-post a:hover { 
+    background-color: #0056b3; /* Darker blue background color on hover */
+  color: #fff;
+
+}
+
+
+
+.cot {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+
+.board {
+  max-width: 500px; /* Reduce max-width for smaller boxes */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-section p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.contact-section form {
+  margin-top: 15px;
+}
+
+.contact-section label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+  width: calc(100% - 30px); /* Reduce width to accommodate smaller box */
+  padding: 8px; /* Reduce padding for smaller input fields */
+  margin-bottom: 10px; /* Reduce margin for smaller spacing */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input[type="text"]:focus,
+.contact-section input[type="email"]:focus,
+.contact-section textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.contact-section textarea {
+  resize: vertical;
+}
+
+.contact-section button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* Reduce padding for smaller button */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #357cb7;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Meal Donation Organizer</span>
+            
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact us</a>  
+                 
+        </nav>
+    </header>
+    <div>
+        <img class="img1" src="\static\f4ef02c5da0fc4fdaf19c057e0acbc55.jpg">
+        <h1 class="tex1">Lend the helping hand get involved</h1>
+    </div>
+    <br>
+
+    <div id="about">
+    <div class="cot">
+        <section class="about-section">
+          <h2>About Us</h2>
+          <p>The Food Donation Management System is a non-profit organization dedicated to reduce food waste and alleviating hunger in our community. We work tirelessly to collect surplus food from local businesses, restaurants, and supermarkets and distribute it to those in need.</p>
+          <p>Our mission is to create a more equitable and sustainable food system by ensuring that no edible food goes to waste while people in our community are facing hunger.</p>
+          <p>Through the dedication of our volunteers, the support of our donors, and the collaboration of our partner organizations, we are making a meaningful difference in the lives of individuals and families who rely on food assistance.</p>
+        </section>
+      </div>
+      </div>
+
+
+
+
+
+<div class="box">
+   <h3 style="font-size: 1.5em; font-weight: bold; color: #333; margin-bottom: 6px;"><center>Login as</center></h3>
+   <a href="/DONOR/">DONOR</a>
+   <a href="/VOLUNTEER/">VOLUNTEER</a>
+   <a href="/ADMIN/">ADMIN</a>
+   <a href="/RECIPIENT/">RECIPIENT</a>
+   
+
+</div><br>
+
+
+
+<div id="services">
+<h3 style="font-size: 1.5em; font-weight: bold; color: #333; margin-bottom: 6px;"><center>SERVICES</center></h3>
+<div class="contain">
+    <section class="service">
+      <h2>Food Collection</h2>
+      <p>Efficiently collect food donations from various sources such as individuals, restaurants, and supermarkets.</p>
+    </section>
+
+    <section class="service">
+      <h2>Inventory Management</h2>
+      <p>Keep track of donated food items, manage inventory, and ensure proper storage and distribution.</p>
+    </section>
+
+    <section class="service">
+      <h2>Volunteer Coordination</h2>
+      <p>Recruit, manage, and schedule volunteers for various tasks related to food collection, sorting, and distribution.</p>
+    </section>
+
+    <section class="service">
+      <h2>Distribution Network</h2>
+      <p>Establish a network of partner organizations and agencies to efficiently distribute food donations to those in need.</p>
+    </section>
+  </div>
+  </div>
+
+
+
+
+  <h3 style="font-size: 1.5em; font-weight: bold; color: #333; margin-bottom: 6px;"><center>BLOGS</center></h3>
+  <div id="blog">
+  <div class="con">
+    <article class="blog-post">
+      <h2>Reducing Food Waste: A Key Goal of Our System</h2>
+      <p>In our food donation management system, one of our primary objectives is to reduce food waste by efficiently distributing surplus food to those in need. Food waste is a significant issue globally, with millions of tons of perfectly edible food being wasted each year while many people go hungry.
+
+        By partnering with local food businesses, restaurants, and supermarkets, we collect excess food that would otherwise go to waste. Our system ensures that this food is distributed to food banks, shelters, and other charitable organizations, where it can be utilized to feed those facing food insecurity.
+        
+        We also implement strategies to minimize food waste within our own operations, such as proper inventory management, careful planning of food distribution routes, and regular communication with our partner organizations to ensure timely delivery of donations.</p>
+      <a href="#">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Volunteers: The Backbone of Our System</h2>
+      <p>Volunteers play a crucial role in the success of our food donation management system. They are the backbone of our operations, dedicating their time and effort to help those in need and make a positive impact on the community.
+
+        Our volunteers come from diverse backgrounds and bring a range of skills and expertise to the table. Some assist in collecting food donations from local businesses, while others help sort and distribute food to various charitable organizations. Additionally, volunteers may provide administrative support, coordinate outreach efforts, or lend their talents in other ways to support our mission.
+        
+        Without the dedication and commitment of our volunteers, our system would not be able to function effectively. Their passion for helping others and their willingness to give back to the community are truly inspiring.</p>
+      <a href="#">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Improving Efficiency Through Technology</h2>
+      <p>In today's fast-paced world, leveraging technology is essential for optimizing processes and achieving greater efficiency. At our food donation management system, we recognize the importance of harnessing technology to streamline operations and maximize our impact on reducing food waste and alleviating hunger.
+
+        One way we improve efficiency is through the use of digital platforms for food donation tracking and management. By implementing sophisticated software solutions, we can easily record and monitor incoming donations, track inventory levels, and coordinate distribution efforts in real-time. This allows us to identify areas of need more quickly and allocate resources more effectively.
+        
+        Additionally, technology plays a crucial role in communication and outreach. We utilize social media, email campaigns, and mobile apps to engage with volunteers, donors, and partner organizations, keeping them informed about our initiatives and opportunities to get involved. These digital tools enable us to reach a broader audience and mobilize support more efficiently.</p>
+      <a href="#">Read More</a>
+    </article>
+  </div>
+  </div>
+
+   
+
+
+
+
+
+<footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <!--<div class="footer-col">            
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                        </ul>
+                    </div>    -->                   
+                    <div class="footer-col">
+                        <h4>Who we are</h4>
+                        <ul>
+                            <li><a href="#about">About us</a></li>
+                            <li><a href="#contact">Contact us</a></li>
+                            <li><a href="#">Policies</a></li>
+                            <li><a href="#blog">Blogs</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>DONATE</h4>
+                        <ul>
+                            <li><a href="#">Online Donation</a></li>
+                            <li><a href="#">Sponsor a School</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Our Location</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                        <img class="teer" src="\static\volunteer.png">
+                    </div>
+                   
+
+                    
+                    <div class="board">
+                        <section class="contact-section">
+                          <h2 id="contact">Contact Us</h2>
+                          <p>If you have any questions, suggestions, or feedback, feel free to get in touch with us. You can reach us using the contact form below or through our contact details provided.</p>
+                          
+                          <form action="#" method="POST">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                    
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                    
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                            <button type="submit">Submit</button>
+                          </form>
+                        </section>
+                      </div>
+                    
+                    
+                </div>
+        
+            </div>
+            <div class="footerBottom">
+                <img  src="\static\twitter (3).png">
+                <img  src="\static\instagram (1).png">
+                <img src="\static\facebook.png">
+                <p>Copyright &copy;2024</p>
+            
+            </div>
+        
+</footer>
+        
+</body>
+</html>

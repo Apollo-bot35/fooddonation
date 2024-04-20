@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Detail Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.food-detail {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+  background-color: red;
+  color: white;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Food Donation Management System</h1>
+            
+        </header>
+        <main>
+            <article class="food-detail"></article>
+                <h2>Food Item Details</h2>
+                <form action="/adddetails/" method="POST">
+                {% csrf_token %}
+                <strong>Type:</strong>
+                <input type="text" id="type" name="type" placeholder="solid/liquid"><br>
+                <strong>Quality:</strong> 
+                <input type="range" id="quality" name="quality" min="0" max="10">
+                <strong>Expiration Date:</strong> 
+                <input type="date" id="date" name="date" required><br><br>
+                <strong>Description:</strong>
+                <textarea rows="3" cols="50" name="description"></textarea><br><br>
+                <strong>When was the meal prepared(Hrs):</strong>
+                <input type="number" id="prepared" name="prepared"><br><br>
+                <strong>Select the Category:</strong> 
+                <input type="radio" id="raw" name="raw" value="raw food"><label for="raw">RAW FOOD</label> 
+                <input type="radio" id="raw" name="raw" value="cooked food"><label for="raw">COOKED FOOD</label> 
+                <input type="radio" id="raw" name="raw" value="packed food><label for="raw">PACKED FOOD</label> <br><br><br>
+                <strong>Pickup Location:</strong>
+                <input type="text" id="location" name="location" required><br><br>
+                <strong>By when you can donate:</strong>
+                <input type="date" id="date" name="date" required>
+                <input type="time" id="appt" name="appt">
+
+
+
+
+                <center><button class="button button1">POST</button></center>
+                </form>
+               
+            </article>
+        </main>
+        <footer>
+            <p>&copy; 2024 Food Donation Management System</p>
+        </footer>
+    </div>
+</body>
+</html>

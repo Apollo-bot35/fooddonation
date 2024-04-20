@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>report</title>
+    <style>
+    
+table {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+
+th {
+  background-color: #f2f2f2; 
+  border: 1px solid #dddddd; 
+  padding: 8px; 
+  text-align: left;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+
+td {
+  border: 1px solid #dddddd; 
+  padding: 8px; 
+  text-align: left; 
+}
+    </style>
+</head>
+<body>
+    <h1><center> FOOD ITEM DETAILS</center></h1>
+    <hr>
+    <br><br>
+    
+    <table border="4">
+        <tr>
+            <th>TYPE</th>
+            <th>EXPIRY DATE</th>
+            <th>DESCRIPTION</th>
+            <th>HOURS</th>
+            <th>CATEGORY</th>
+            <th>LOCATION</th>
+            <th>DONATE</th>
+
+        </tr>
+
+        {% for x in foodlist %}
+        <tr>
+            {% for col in x %}
+            <td>{{col}}</td>
+            {%endfor%}
+        </tr>    
+        {%endfor%} 
+    </table>
+</body>
+</html>
+
+
+
+
+
